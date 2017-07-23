@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.css">
+        <link rel="stylesheet" href="less/index.css">
+        <link rel="stylesheet" href="assets/nprogress/nprogress.css">
+        <link rel="stylesheet" href="less/bootstrap-table.css">
+        <script src="assets/nprogress/nprogress.js"></script>
+        <script src="assets/jquery/jquery.min.js"></script>
+    </head>
+    <body>
+     <div class="aside">
+    	<div class="profile">
+    		<div class="avatar img-circle">
+    			<img src="./images/my_logo.jpg" alt="">
+    		</div>
+    		<h4>张学友</h4>
+    	</div>
+    	 <div class="navs">
+    	<ul class="list-unstyled">
+    		<li ><a href="index.html"><i class="fa fa-user"></i>用户管理</a></li>
+    		<li><a href="javascript:;"><i class="fa fa-bars">
+    		</i>分类管理</a>
+            <ul class="list-unstyled" style="display:block">
+            	<li class="active"><a href="categoryFirst.html">一级分类管理</a></li>
+            	<li><a href="categorySecond.html">二级分类管理</a></li>
+            </ul>
+            </li>
+            <li><a href="productList.html"><i class="fa fa-product-hunt"></i>商品管理</a>
+            </li>
+            <li><a href="showProductList.html"><i class="fa fa-user"></i>报表管理</a></li>
+    	</ul>
+    </div>
+    </div>
+    <!-- 主体 -->
+    <div class="main">
+    	<div class="container-fluid">
+    		<div class="header">
+    			<nav class="navbar navbar-custom">
+    			    <div class="navbar-header">
+    			    	<a href="javascript:;" class="navbar-brand">
+    			    		<i class="fa fa-navicon"></i>
+    			    	</a>
+    			    </div>	
+    			    <ul class="nav navbar-nav navbar-right">
+    			    	<li>
+    			    		<a href="jacascript:;" class="login_out_bot" data-toggle="model" data-target=".bs-example-model-sm"><i class="fa fa-sign-out"></i>退出</a>
+    			    	</li>
+    			    </ul>
+    			</nav>
+    		</div>
+    		<div class="body teacher-profile">
+    			<div class="profile">
+    				<div class="chart">
+    				<div class="main">
+    				    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addCategoryWindow">
+ 						添加
+						</button>
+
+						<!-- Modal -->
+						<div class="modal fade" id="addCategoryWindow" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+						  <div class="modal-dialog" role="document">
+						    <div class="modal-content">
+						      <div class="modal-header">
+						        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						        <h4 class="modal-title" id="myModalLabel">添加分类</h4>
+						      </div>
+						      <div class="modal-body">
+						        <form action="">
+                                    <input type="text" id="categoryNameId" class="form-control" placeholder="请输入分类的名称">
+                                </form>
+						      </div>
+						      <div class="modal-footer">
+						        <button type="button" class="btn btn-default cancelCategoryButton" data-dismiss="modal">关闭</button>
+						        <button type="button" class="btn btn-primary addCategoryButton">确定</button>
+						      </div>
+						    </div>
+						  </div>
+						</div>
+    					<table id="categoryTableId"></table>
+    				</div>
+    			    </div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+    </body>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-table.js"></script>
+    <script src="js/bootstrap-table-zh-CN.js"></script>
+    <script src="js/common.js"></script>
+    <script>
+    $("#categoryTableId").bootstrapTable({
+        method:"get",
+        url:"/category/queryTopCategoryPaging",
+        queryParams:function(params){
+        	params.page = (params.offset/10)+1;
+        	params.pageSize = 10; 
+        	return params;
+        },
+        pagination:true,
+        pageList:[10],
+        sidePagination:"server",
+        columns:[
+            {
+        	    checkbox:true
+            },
+            {
+            	title:"分类编号",
+            	field:"id"
+            },
+        	{
+        		title:"分类名称",
+        		field:"categoryName"
+        	}
+        ]
+    });
+     $(".addCategoryButton").on("click",function(){
+                //获取分类的名称.
+                var categoryName=$("#categoryNameId").val();
+                $.ajax({
+                    type:"post",
+                    url:"/category/addTopCategory",
+                    data:{
+                        categoryName:categoryName
+                    },
+                    success:function(data){
+                         if(data.success){
+
+                              //触发取消按钮的点击事件.
+                              $(".cancelCategoryButton").click();
+                              //刷新这个table
+                              $("#categoryTableId").bootstrapTable("refresh");
+                              alert("添加成功");
+                         }
+                    }
+                })
+      });
+
+
+    </script>
+</html>

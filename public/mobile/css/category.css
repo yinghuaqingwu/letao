@@ -1,0 +1,36 @@
+#category_left li {
+  color: black;
+}
+#category_left .mui-table-view-cell:after {
+  left: 0px;
+}
+#category_left .mui-table-view-cell.mui-active {
+  background-color: #ccc;
+}
+#category_right p:nth-child(1) {
+  color: black;
+  font-size: 12px;
+  margin-top: 10px;
+}
+#category_right ul {
+  width: 100%;
+  overflow: hidden;
+  background-color: white;
+}
+#category_right ul li {
+  float: left;
+  width: 25%;
+  text-align: center;
+}
+#category_right ul li a {
+  display: block;
+  float: left;
+  width: 100%;
+}
+#category_right ul li a img {
+  display: block;
+  width: 100%;
+}
+#category_right ul li p {
+  font-size: 12px;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/mui.min.css"/>
+    <link rel="stylesheet" href="./css/common.css"/>
+    <link rel="stylesheet" href="./css/detail.css"/>
+    <link rel="stylesheet" href="./fontAwesome/css/font-awesome.css"/>
+</head>
+<body>
+<header class="mui-bar mui-bar-nav header">
+    <a class="mui-action-search mui-icon mui-icon-refresh mui-pull-right"></a>
+    <h1 class="mui-title">商品详情页</h1>
+</header>
+
+<div class="mui-content">
+    <div id="slider" class="mui-slider" >
+        <div class="mui-slider-group mui-slider-loop">
+            <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+            <div class="mui-slider-item mui-slider-item-duplicate">
+                <a href="#">
+                    <img src="./images/banner4.png">
+                </a>
+            </div>
+            <!-- 第一张 -->
+            <div class="mui-slider-item">
+                <a href="#">
+                    <img src="./images/banner1.png">
+                </a>
+            </div>
+            <!-- 第二张 -->
+            <div class="mui-slider-item">
+                <a href="#">
+                    <img src="./images/banner2.png">
+                </a>
+            </div>
+            <!-- 第三张 -->
+            <div class="mui-slider-item">
+                <a href="#">
+                    <img src="./images/banner3.png">
+                </a>
+            </div>
+            <!-- 第四张 -->
+            <div class="mui-slider-item">
+                <a href="#">
+                    <img src="./images/banner4.png">
+                </a>
+            </div>
+            <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+            <div class="mui-slider-item mui-slider-item-duplicate">
+                <a href="#">
+                    <img src="./images/banner1.png">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="center_info">
+</div>
+<div class="buy_count">
+    购买数量：<div class="mui-numbox">
+    <button class="mui-btn mui-btn-numbox-minus" type="button">-</button>
+    <input class="mui-input-numbox" id="productNumberId" type="number" />
+    <button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
+    </div>
+</div>
+
+<div class="btns">
+    <a href="javascript:;" class="mui-icon fa fa-shopping-cart"></a>
+    <a href="./cart.html" class="add_cart mui-btn btn_addCart">加入购物车</a>
+    <a href="./productDetail.html" class="lima_buy mui-btn">立即购买</a>
+</div>
+<div class="foot"></div>
+<footer>
+    <nav class="mui-bar mui-bar-tab footer">
+        <a class="mui-tab-item mui-active" href="index.html">
+            <span class="mui-icon mui-icon-home"></span>
+            <span class="mui-tab-label">首页</span>
+        </a>
+        <a class="mui-tab-item" href="category.html">
+            <span class="mui-icon mui-icon-bars"></span>
+            <span class="mui-tab-label">分类</span>
+        </a>
+        <a class="mui-tab-item" href="cart.html">
+            <span class="mui-icon fa fa-shopping-cart"></span>
+            <span class="mui-tab-label">购物车</span>
+        </a>
+        <a class="mui-tab-item" href="./user/index.html">
+            <span class="mui-icon mui-icon-person-filled"></span>
+            <span class="mui-tab-label">会员中心</span>
+        </a>
+    </nav>
+</footer>
+</body>
+<script src="./js/zepto.min.js"></script>
+<script src="./js/mui.min.js"></script>
+<script src="./artTemplate/template-native.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/productDetail.js"></script>
+<script type="text/template" id="producttemplateId">
+    <div class="pro_info">
+        描述: <span><%=proDesc%></span>
+    </div>
+    <div class="price">价格：<span><%=price%></span>原价：<span><%=oldPrice%></span></div>
+    <ul class="product_size">
+        <% var minnum=size.split('-')[0];var maxnum=size.split('-')[1];%>
+        <%for(var i=minnum;i<=maxnum;i++){%>
+            <li><%=i%></li>
+        <%}%>
+    </ul>
+</script>
+<script>
+    itcast.tools.fixFooter();
+    itcast.product.init.eventListenerInit();
+</script>
+</html>

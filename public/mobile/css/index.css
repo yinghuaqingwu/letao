@@ -1,0 +1,117 @@
+.le_brand {
+  margin: 10px;
+  margin-right: 0px;
+}
+.le_brand ul {
+  overflow: hidden;
+}
+.le_brand ul li {
+  float: left;
+  width: 33.33%;
+}
+.le_brand ul li a {
+  display: block;
+  width: 100%;
+}
+.le_brand ul li a img {
+  display: block;
+  width: 100%;
+}
+.pinpai {
+  width: 100%;
+  margin: 10px;
+}
+.pinpai a {
+  display: block;
+}
+.pinpai a:nth-child(2n-1) {
+  width: 67%;
+  float: left;
+}
+.pinpai a:nth-child(2n-1) img {
+  width: 50%;
+  float: left;
+  display: block;
+}
+.pinpai a:nth-child(2) {
+  width: 33%;
+  float: right;
+}
+.pinpai a:nth-child(2) img {
+  width: 100%;
+  float: left;
+  display: block;
+}
+.zhuanqu {
+  margin: 5px 10px;
+  overflow: hidden;
+  width: 100%;
+}
+.zhuanqu .title img {
+  display: block;
+  width: 100%;
+}
+.zhuanqu .brand ul li {
+  float: left;
+  width: 25%;
+}
+.zhuanqu .brand ul li a {
+  display: block;
+  width: 100%;
+}
+.zhuanqu .brand ul li a img {
+  width: 100%;
+  display: block;
+  float: left;
+}
+.yundong {
+  width: 100%;
+  overflow: hidden;
+  margin: 0px 10px;
+}
+.yundong .title {
+  padding-top: 10px;
+  width: 100%;
+}
+.yundong .title img {
+  display: block;
+  width: 100%;
+}
+.yundong .box a {
+  margin-top: 5px;
+  display: block;
+  float: left;
+  width: 50%;
+  padding: 5px;
+  background-color: white;
+  box-shadow: 0px 0px 5px #ccc;
+}
+.yundong .box a img {
+  display: block;
+  width: 100%;
+}
+.yundong .box a p {
+  text-align: center;
+}
+.yundong .box a p:nth-of-type(1) {
+  color: #ccc;
+  height: 30px;
+  line-height: 30px;
+  overflow: hidden;
+}
+.yundong .box a p:nth-of-type(2) span:nth-child(1) {
+  color: red;
+}
+.yundong .box a p:nth-of-type(2) span:nth-child(2) {
+  color: #ccc;
+  text-decoration: line-through;
+}
+.yundong .box a input {
+  background-color: pink;
+  display: block;
+  margin: 0 auto;
+  color: white;
+}
+.foot {
+  height: 50px;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/mui.min.css"/>
+    <link rel="stylesheet" href="./css/common.css"/>
+    <link rel="stylesheet" href="./css/category.css"/>
+    <link rel="stylesheet" href="./fontAwesome/css/font-awesome.css"/>
+</head>
+<body>
+<header class="mui-bar mui-bar-nav header">
+    <a class="mui-action-back mui-icon mui-icon-arrowthinleft mui-pull-left"></a>
+    <h1 class="mui-title"><input type="text" style="height: 30px;margin-top: 6px;" class="mui-input-clear"/></h1>
+    <a class="mui-action-search mui-icon mui-icon-search mui-pull-right"></a>
+</header>
+
+<div class="mui-content mui-row mui-fullscreen list">
+    <div class="mui-col-xs-3">
+        <div id="category_left" class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-vertical">
+            <ul class="mui-table-view">
+                <li class="mui-table-view-cell mui-active">运动馆</li>
+                <li class="mui-table-view-cell">女士馆</li>
+                <li class="mui-table-view-cell">男士馆</li>
+                <li class="mui-table-view-cell">帆布馆</li>
+                <li class="mui-table-view-cell">户外馆</li>
+            </ul>
+        </div>
+    </div>
+    <div id="category_right" class="mui-col-xs-9" style="border-left: 1px solid #c8c7cc;">
+        <p>热门品牌购</p>
+        <ul>
+            <li>
+                <a href=""><img src="./images/brand1.png" alt=""></a>
+                <p>阿迪达斯</p>
+            </li>
+            <li>
+                <a href=""><img src="./images/brand2.png" alt=""></a>
+                <p>沃特</p>
+            </li>
+            <li>
+                <a href=""><img src="./images/brand3.png" alt=""></a>
+                <p>安踏</p>
+            </li>
+            <li>
+                <a href=""><img src="./images/brand4.png" alt=""></a>
+                <p>李宁</p>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<footer>
+    <nav class="mui-bar mui-bar-tab footer">
+        <a class="mui-tab-item mui-active" href="index.html">
+            <span class="mui-icon mui-icon-home"></span>
+            <span class="mui-tab-label">首页</span>
+        </a>
+        <a class="mui-tab-item" href="category.html">
+            <span class="mui-icon mui-icon-bars"></span>
+            <span class="mui-tab-label">分类</span>
+        </a>
+        <a class="mui-tab-item" href="cart.html">
+            <span class="mui-icon fa fa-shopping-cart"></span>
+            <span class="mui-tab-label">购物车</span>
+        </a>
+        <a class="mui-tab-item" href="./user/index.html">
+            <span class="mui-icon mui-icon-person-filled"></span>
+            <span class="mui-tab-label">会员中心</span>
+        </a>
+    </nav>
+</footer>
+</body>
+<script src="./js/zepto.min.js"></script>
+<script src="./js/mui.min.js"></script>
+<script src="./js/common.js"></script>
+<script>
+    itcast.tools.fixFooter();
+</script>
+</html>

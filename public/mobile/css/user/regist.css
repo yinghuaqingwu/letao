@@ -1,0 +1,46 @@
+.cz_regist {
+  padding: 10px;
+}
+.cz_regist input {
+  border-radius: 5px;
+  color: black;
+}
+.cz_regist .code {
+  width: 60%;
+  float: left;
+  display: block;
+}
+.cz_regist .mycode {
+  display: block;
+  width: 38%;
+  float: right;
+  height: 38px;
+  margin-top: 1px;
+  line-height: 1.2;
+}
+.cz_regist .check {
+  width: 100%;
+  display: block;
+}
+.cz_regist p {
+  display: block;
+  margin-top: 15px;
+}
+.cz_regist p input {
+  height: 20px;
+  line-height: 20px;
+  vertical-align: middle;
+}
+.cz_regist p label {
+  color: #ccc;
+  font-size: 12px;
+}
+.cz_regist p label a {
+  color: #ccc;
+  font-size: 12px;
+}
+.cz_regist p a.login {
+  color: #007aff;
+  font-size: 12px;
+  float: right;
+}

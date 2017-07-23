@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/mui.min.css"/>
+    <link rel="stylesheet" href="./css/common.css"/>
+    <link rel="stylesheet" href="./css/cart.css"/>
+    <link rel="stylesheet" href="./fontAwesome/css/font-awesome.css"/>
+</head>
+<body>
+<header class="mui-bar mui-bar-nav header">
+    <a class="mui-action-back mui-icon mui-icon-arrowthinleft mui-pull-left"></a>
+    <h1 class="mui-title">购物车</h1>
+    <a class="mui-action-refresh mui-icon mui-icon-refresh-filled mui-pull-right"></a>
+</header>
+
+<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+<div class="mui-scroll">
+<div class="mui-content">
+    <ul class="mui-table-view cart_list_items">
+    </ul>
+    <div class="box_field"></div>
+    <div class="cz_order">
+        订单金额：
+        <span>&yen;999.99</span>
+        <span>生成订单</span>
+    </div>
+</div>
+</div>
+    </div>
+
+<footer>
+    <nav class="mui-bar mui-bar-tab footer">
+        <a class="mui-tab-item mui-active" href="index.html">
+            <span class="mui-icon mui-icon-home"></span>
+            <span class="mui-tab-label">首页</span>
+        </a>
+        <a class="mui-tab-item" href="category.html">
+            <span class="mui-icon mui-icon-bars"></span>
+            <span class="mui-tab-label">分类</span>
+        </a>
+        <a class="mui-tab-item" href="cart.html">
+            <span class="mui-icon fa fa-shopping-cart"></span>
+            <span class="mui-tab-label">购物车</span>
+        </a>
+        <a class="mui-tab-item" href="./user/index.html">
+            <span class="mui-icon mui-icon-person-filled"></span>
+            <span class="mui-tab-label">会员中心</span>
+        </a>
+    </nav>
+</footer>
+</body>
+<script src="./js/zepto.min.js"></script>
+<script src="./js/mui.min.js"></script>
+<script src="./artTemplate/template-native.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/cart.js"></script>
+<script type="text/template" id="cartTemplateId">
+    <% for(var i=0;i<data.length;i++){%>
+    <li class="mui-table-view-cell cart_list_item">
+        <div class="mui-slider-right mui-disabled">
+            <a class="mui-btn mui-btn-red deleteCart_btn" data-cart-Id="<%=data[i].id%>">删除</a>
+        </div>
+        <div class="mui-slider-handle cart_list_item_content">
+            <a href="javascript:;">
+                <img src="<%=data[0].pic[0].picAddr%>" alt=""/>
+                <div class="product_info">
+                    <p><%=data[i].proName%></p>
+                    <p><span>&yen;<%=data[i].price%></span><span>&yen;<%=data[i].oldPrice%></span><span><%=data[i].num%>双</span>
+                    </p>
+                    <p>鞋码：<span><%=data[i].size%></span></p>
+                </div>
+            </a>
+            <a href="javascript:;" class="mui-navigate-right"></a>
+        </div>
+    </li>
+    <%}%>
+</script>
+<script>
+    itcast.tools.fixFooter();
+    itcast.cart.init.loadCartData();
+    itcast.cart.init.eventListenerInit();
+</script>
+</html>

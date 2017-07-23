@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/mui.min.css"/>
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link rel="stylesheet" href="../css/user/login.css"/>
+    <link rel="stylesheet" href="../fontAwesome/css/font-awesome.css"/>
+</head>
+<body>
+<header class="mui-bar mui-bar-nav header">
+    <a class="mui-action-back mui-icon mui-icon-arrowthinleft mui-pull-left"></a>
+    <h1 class="mui-title">登录</h1>
+</header>
+
+<div class="mui-content">
+    <form action="" class="cz_login">
+        <div class="mui-input-row">
+            <input type="text" name="username" class="mui-input-clear" placeholder="请输入用户名">
+        </div>
+        <div class="mui-input-row mui-password">
+            <input type="password" name="password" class="mui-input-password" placeholder="请输入密码">
+        </div>
+        <a href="javascript:;" class="login_btn mui-btn mui-btn-primary" data-loading-text = "提交中.." data-loading-icon-position="right">确认</a>
+        <p><a href="./regist.html">免费注册</a></p>
+    </form>
+</div>
+<footer>
+    <nav class="mui-bar mui-bar-tab footer">
+        <a class="mui-tab-item mui-active" href="../index.html">
+            <span class="mui-icon mui-icon-home"></span>
+            <span class="mui-tab-label">首页</span>
+        </a>
+        <a class="mui-tab-item" href="../category.html">
+            <span class="mui-icon mui-icon-bars"></span>
+            <span class="mui-tab-label">分类</span>
+        </a>
+        <a class="mui-tab-item" href="../cart.html">
+            <span class="mui-icon fa fa-shopping-cart"></span>
+            <span class="mui-tab-label">购物车</span>
+        </a>
+        <a class="mui-tab-item" href="./index.html">
+            <span class="mui-icon mui-icon-person-filled"></span>
+            <span class="mui-tab-label">会员中心</span>
+        </a>
+    </nav>
+</footer>
+</body>
+<script src="../js/zepto.min.js"></script>
+<script src="../js/mui.min.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/user/login.js"></script>
+<script>
+    itcast.tools.fixFooter();
+    itcast.login.init.eventListenerInit();
+</script>
+</html>

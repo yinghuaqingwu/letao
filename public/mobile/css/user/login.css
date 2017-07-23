@@ -1,0 +1,20 @@
+.cz_login {
+  padding: 10px;
+}
+.cz_login input {
+  border-radius: 5px;
+  color: black;
+}
+.cz_login a:nth-of-type(1) {
+  display: block;
+  width: 100%;
+}
+.cz_login p {
+  display: block;
+  margin-top: 15px;
+  float: right;
+}
+.cz_login p a {
+  color: #007aff;
+  font-size: 12px;
+}

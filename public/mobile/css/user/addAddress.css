@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  color: white;
+  font-family: 'Microsoft Yahei', sans-serif;
+}
+body {
+  width: 100%;
+}
+input,
+img {
+  outline: none;
+  border: none;
+  vertical-align: top;
+  -moz-appearance: none;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  color: white;
+}
+li {
+  list-style: none;
+}
+.clearfix:before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+  clear: both;
+}
+.clearfix {
+  zoom: 1;
+}
+.header {
+  background-color: green;
+}
+.header .mui-title {
+  color: white;
+}
+.footer {
+  background-color: green;
+}
+.mui-bar-nav ~ .mui-content {
+  padding: 10px;
+  padding-top: 65px;
+}
+.mui-bar-nav ~ .mui-content input {
+  width: 100%;
+  border-radius: 5px;
+  color: black;
+}
+.mui-bar-nav ~ .mui-content textarea {
+  color: black;
+}
+.mui-bar-nav ~ .mui-content a {
+  display: block;
+  width: 100%;
+  background-color: green;
+  color: white;
+}

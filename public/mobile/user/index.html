@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/mui.min.css"/>
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link rel="stylesheet" href="../css/user/userindex.css"/>
+    <link rel="stylesheet" href="../fontAwesome/css/font-awesome.css"/>
+</head>
+<body>
+<header class="mui-bar mui-bar-nav header">
+    <a class="mui-action-back mui-icon mui-icon-arrowthinleft mui-pull-left"></a>
+    <h1 class="mui-title">个人中心</h1>
+    <a class="mui-action-back mui-icon mui-icon-home-filled mui-pull-right"></a>
+</header>
+
+<div class="mui-content">
+    <ul class="mui-table-view">
+        <li class="mui-table-view-cell">
+            <a class="mui-navigate-right">
+                <img src="../images/user.jpg" alt=""/>
+                <p class="cz_username">小旋风</p>
+                <p class="cz_mobile">绑定手机:13620934111</p>
+            </a>
+        </li>
+        <li class="mui-table-view-cell">
+            <a class="mui-navigate-right" href="addressManager.html">
+                收货地址管理
+            </a>
+        </li>
+        <li class="mui-table-view-cell">
+            <a class="mui-navigate-right">
+                我的购物车
+            </a>
+        </li>
+        <li class="mui-table-view-cell">
+            <a class="mui-navigate-right">
+                账号与安全
+            </a>
+        </li>
+    </ul>
+    <a href="./login.html" class="mui-btn mui-btn-primary logout_btn">退出登录</a>
+</div>
+
+<footer>
+    <nav class="mui-bar mui-bar-tab footer">
+        <a class="mui-tab-item mui-active" href="../index.html">
+            <span class="mui-icon mui-icon-home"></span>
+            <span class="mui-tab-label">首页</span>
+        </a>
+        <a class="mui-tab-item" href="../category.html">
+            <span class="mui-icon mui-icon-bars"></span>
+            <span class="mui-tab-label">分类</span>
+        </a>
+        <a class="mui-tab-item" href="../cart.html">
+            <span class="mui-icon fa fa-shopping-cart"></span>
+            <span class="mui-tab-label">购物车</span>
+        </a>
+        <a class="mui-tab-item" href="./index.html">
+            <span class="mui-icon mui-icon-person-filled"></span>
+            <span class="mui-tab-label">会员中心</span>
+        </a>
+    </nav>
+</footer>
+</body>
+<script src="../js/zepto.min.js"></script>
+<script src="../js/mui.min.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/user/userindex.js"></script>
+<script>
+    itcast.tools.fixFooter();
+</script>
+</html>
